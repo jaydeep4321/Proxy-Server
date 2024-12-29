@@ -6,6 +6,10 @@ const app = express();
 
 app.use(cors());
 
+app.get('/', (req, res) => {
+  res.send('Proxy Server running');
+});
+
 app.get('/restaurant-list', async (req, res) => {
   const { lat, long } = req.query;
 
